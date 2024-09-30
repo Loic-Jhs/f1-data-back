@@ -1,0 +1,25 @@
+{
+  "name": "f1-data-back",
+  "version": "1.0.0",
+  "description": "Big data school project about F1 races",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Loic-Jhs/f1-data-back.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Loic-Jhs/f1-data-back/issues"
+  },
+  "homepage": "https://github.com/Loic-Jhs/f1-data-back#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.7",
+    "prettier": "^3.3.3"
+  }
+}
