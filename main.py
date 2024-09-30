@@ -41,3 +41,13 @@ def read_constructors(db: Session = Depends(get_db)):
 @app.post("/constructor/", response_model=schemas.Constructor)
 def create_constructor(constructor: schemas.CreateConstructor, db: Session = Depends(get_db)):
     return crud.set_constructor(db, constructor)
+
+# TODO: Faire les routes get & post sur circuits
+@app.get("/circuits/", response_model=schemas.Circuits)
+def read_circuits(db: Session = Depends(get_db)):
+    circuits = crud.get_circuits(db)
+    return {"circuits": circuits}
+
+@app.post("/circuit/", response_model=schemas.Circuit)
+def create_circuit(circuit: schemas.CreateCircuit, db: Session = Depends(get_db)):
+    return crud.set_circuit(db, circuit)

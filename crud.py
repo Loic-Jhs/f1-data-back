@@ -18,3 +18,13 @@ def set_constructor(db: Session, constructor: schemas.CreateConstructor):
         db.rollback()
         logging.error(f"Error setting constructor: {e}")
         return None
+    
+def get_circuits(db: Session):
+    return db.query(models.Circuit).all()
+
+def set_circuit(db: Session, circuit: schemas.CreateCircuit):
+    db_circuit = models.Circuit(**circuit.dict())
+    db.add(db_circuit)
+    db.commit()
+    db.refresh(db_circuit)
+    return db_circuit
