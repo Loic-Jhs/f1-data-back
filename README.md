@@ -5,6 +5,8 @@
 ```bash
 python -m venv venv
 source venv/bin/activate
+# For windows
+\venv\Scripts\Activate.ps1
 ```
 
 ```bash
