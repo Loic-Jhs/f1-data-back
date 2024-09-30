@@ -1,3 +1,4 @@
+from copyreg import constructor
 from pydantic import BaseModel
 from typing import List
 
@@ -24,3 +25,15 @@ class Circuit(CreateCircuit):
 
 class Circuits(BaseModel):
     circuits: list[Circuit]
+
+class CreatePredict(BaseModel): 
+    grid: str
+    circuit: str
+    constructor: str
+    year: str
+
+class Predict(CreatePredict):
+    id: int
+    class Config:
+        orm_mode = True
+
