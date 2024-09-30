@@ -55,10 +55,10 @@ def create_circuit(circuit: schemas.CreateCircuit, db: Session = Depends(get_db)
 @app.post("/predict/", response_model=schemas.Predict)
 def create_predict(predict: schemas.CreatePredict, db: Session = Depends(get_db)):
     # Chargement des modèles et des encoders
-    rf_model = joblib.load('xgboost_model.pkl')
-    label_encoder_circuit = joblib.load('label_encoder_circuit.pkl')
-    label_encoder_constructor = joblib.load('label_encoder_constructor.pkl')
-    label_encoder_year = joblib.load('label_encoder_year.pkl')
+    rf_model = joblib.load('pkl/xgboost_model.pkl')
+    label_encoder_circuit = joblib.load('pkl/label_encoder_circuit.pkl')
+    label_encoder_constructor = joblib.load('pkl/label_encoder_constructor.pkl')
+    label_encoder_year = joblib.load('pkl/label_encoder_year.pkl')
 
     # Nouvelle entrée
     new_data = {
