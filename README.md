@@ -18,3 +18,7 @@ pip install -r requirements.txt
 ```bash
 uvicorn main:app --reload
 ```
+
+## Frontend of project can be found here
+
+[f1-data-front](https://github.com/benribou/f1-data-front)
