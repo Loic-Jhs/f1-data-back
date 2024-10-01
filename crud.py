@@ -37,7 +37,7 @@ def fetch_all_constructors(db: Session):
 
 
 def add_constructor(db: Session, constructor: schemas.CreateConstructor):
-    db_constructor = models.Constructors(name=constructor.name, ref=constructor.ref)
+    db_constructor = models.Constructors(name=constructor.name)
     return _commit_transaction(db, db_constructor)
 
 
@@ -46,7 +46,7 @@ def fetch_all_circuits(db: Session):
 
 
 def add_circuit(db: Session, circuit: schemas.CreateCircuit):
-    db_circuit = models.Circuit(name=circuit.name, ref=circuit.ref)
+    db_circuit = models.Circuit(name=circuit.name)
     return _commit_transaction(db, db_circuit)
 
 
