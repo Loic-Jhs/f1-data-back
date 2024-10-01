@@ -4,6 +4,7 @@ from typing import List
 
 class CreateConstructor(BaseModel):
     name: str
+    ref: str
 
 
 class Constructor(CreateConstructor):
@@ -19,6 +20,7 @@ class Constructors(BaseModel):
 
 class CreateCircuit(BaseModel):
     name: str
+    ref: str
 
 
 class Circuit(CreateCircuit):
